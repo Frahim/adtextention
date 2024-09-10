@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Profile Scraper",
+    "version": "1.0",
+    "description": "Scrapes LinkedIn profile data and exports it as JSON.",
+    "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "login.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.linkedin.com/in/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
