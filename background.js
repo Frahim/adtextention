@@ -23,12 +23,12 @@ async function registerUser(email, password) {
     const data = await response.json();
     return data;
   }
-  chrome.runtime.onInstalled.addListener(() => {
-    // Check if user is logged in when the extension is installed
-    chrome.storage.local.get(['isLoggedIn'], (result) => {
-      if (result.isLoggedIn) {
-        // If logged in, open the scrape popup
-        chrome.action.setPopup({ popup: 'popup.html' });
-      }
-    });
-  });
+  // chrome.runtime.onInstalled.addListener(() => {
+  //   // Check if user is logged in when the extension is installed
+  //   chrome.storage.local.get(['isLoggedIn'], (result) => {
+  //     if (result.isLoggedIn) {
+  //       // If logged in, open the scrape popup
+  //       chrome.action.setPopup({ popup: 'popup.html' });
+  //     }
+  //   });
+  // });
